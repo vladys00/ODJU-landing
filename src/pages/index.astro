@@ -5,10 +5,10 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 	
 	<div class="wrapper">
-		<div>
+		<div class="main-div">
 			<h1>Main</h1>
-			<p>YOU KNOW WHAT I'M CRAVING ? A LITTLE</p>
-			<p>PERSPECTIVE</p>
+			<p class="main-frase">YOU KNOW WHAT I'M CRAVING ? A LITTLE</p>
+			<p class="bold-word">PERSPECTIVE</p>
 			<div>
 				<img src="/public/mainEagle.jpeg" alt="eagle image">
 			</div>
@@ -19,11 +19,23 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
 	.wrapper {
+		
         display: flex;
         justify-content: center;
         align-items: center;
-		img{
-			width: 300px;
+		.main-div{
+			.main-frase{
+				font-family: Arial, Helvetica, sans-serif;
+        		font-weight: bold;
+			}
+			.bold-word{
+                
+            }   
+    	}
+			img{
+				width: 300px;
+			}
 		}
+
     }
 </style>
