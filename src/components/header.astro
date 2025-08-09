@@ -1,10 +1,13 @@
+---
+const currentPath = Astro.url.pathname;
+---
 <header  role="banner">
   <nav  role="navigation" aria-label="Primary Navigation">
     <ul class="header__nav-list">
-      <li class="header__nav-item"><a href="/">Main</a></li>
-      <li class="header__nav-item"><a href="/about">About</a></li>
-      <li class="header__nav-item"><a href="/work">Work</a></li>
-      <li class="header__nav-item"><a href="/contact">Contact</a></li>
+      <li class="header__nav-item"><a href="/" class={currentPath === "/" ? "active" : ""}>Main</a></li>
+      <li class="header__nav-item"><a href="/about" class={currentPath === "/about" ? "active" : ""}>About</a></li>
+      <li class="header__nav-item"><a href="/work" class={currentPath === "/work" ? "active" : ""}>Work</a></li>
+      <li class="header__nav-item"><a href="/contact" class={currentPath === "/contact" ? "active" : ""}>Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -14,6 +17,22 @@
   header {
     nav{
         background-color: red;
+        ul{
+          display: flex;
+          gap: 20px;
+          list-style: none;
+          li{
+            a{
+              color: black;
+              text-decoration: none;
+
+            }
+            a.active {
+              color: white;
+              background-color: #00f30c; /* highlight color */
+            }
+          }
+        }
     }
   }
 </style>
