@@ -3,6 +3,27 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<h1>Main</h1>
-	This is the main page 
+	
+	<div class="wrapper">
+		<div>
+			<h1>Main</h1>
+			<p>YOU KNOW WHAT I'M CRAVING ? A LITTLE</p>
+			<p>PERSPECTIVE</p>
+			<div>
+				<img src="/public/mainEagle.jpeg" alt="eagle image">
+			</div>
+		</div>
+		
+	</div> 
 </Layout>
+
+<style>
+	.wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		img{
+			width: 300px;
+		}
+    }
+</style>

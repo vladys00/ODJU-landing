@@ -3,11 +3,14 @@ const currentPath = Astro.url.pathname;
 ---
 <header  role="banner">
   <nav  role="navigation" aria-label="Primary Navigation">
+    <div class="logo">
+      <a href="/"><img src="/public/logo.png" alt=""></a>
+    </div>
     <ul class="header__nav-list">
-      <li class="header__nav-item"><a href="/" class={currentPath === "/" ? "active" : ""}>Main</a></li>
-      <li class="header__nav-item"><a href="/about" class={currentPath === "/about" ? "active" : ""}>About</a></li>
-      <li class="header__nav-item"><a href="/work" class={currentPath === "/work" ? "active" : ""}>Work</a></li>
-      <li class="header__nav-item"><a href="/contact" class={currentPath === "/contact" ? "active" : ""}>Contact</a></li>
+      <li class="header__nav-item"><a href="/team" class={currentPath === "/team" ? "active" : ""}>TEAM</a></li>
+      <li class="header__nav-item"><a href="/about" class={currentPath === "/about" ? "active" : ""}>ABOUT</a></li>
+      <li class="header__nav-item"><a href="/work" class={currentPath === "/work" ? "active" : ""}>WORK</a></li>
+      <li class="header__nav-item"><a href="/contact" class={currentPath === "/contact" ? "active" : ""}>CONTACT</a></li>
     </ul>
   </nav>
 </header>
@@ -16,20 +19,31 @@ const currentPath = Astro.url.pathname;
 <style>
   header {
     nav{
-        background-color: red;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        .logo{
+          img{
+            width: 155px;
+          }
+        }
         ul{
           display: flex;
-          gap: 20px;
+          gap: 105px;
           list-style: none;
           li{
             a{
               color: black;
               text-decoration: none;
-
+              padding: 2px 5px;
             }
             a.active {
-              color: white;
-              background-color: #00f30c; /* highlight color */
+              background-color: #FFF762;/* highlight color */
             }
           }
         }
