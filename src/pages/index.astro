@@ -6,10 +6,9 @@ import Layout from '../layouts/Layout.astro';
 	
 	<div class="wrapper">
 		<div class="main-div">
-			<h1>Main</h1>
 			<p class="main-frase">YOU KNOW WHAT I'M CRAVING ? A LITTLE</p>
 			<p class="bold-word">PERSPECTIVE</p>
-			<div>
+			<div class="image-container">
 				<img src="/public/mainEagle.jpeg" alt="eagle image">
 			</div>
 		</div>
@@ -23,15 +22,23 @@ import Layout from '../layouts/Layout.astro';
         display: flex;
         justify-content: center;
         align-items: center;
+     	margin: 20px 0 70px 0;
 		.main-div{
+			.image-container{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 			.main-frase{
 				font-family: Arial, Helvetica, sans-serif;
         		font-weight: bold;
+				font-size: 25px;
 			}
 			.bold-word{
-                
+                font-family: 'Cooper Extra Bold';
+				font-size: 25px;
+				text-align: right;
             }   
-    	}
 			img{
 				width: 300px;
 			}
