@@ -3,6 +3,77 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <h1>About</h1>
-  <p>This is the about page.</p>
+	
+	<div class="wrapper">
+		<div class="main-div">
+			<p class="main-frase">CAN YOU SUGEST A GOOOD WINE TO GO WITH </p>
+			<p class="bold-word">THAT?</p>
+		</div>
+    <div class="offers-wrapper">
+      <ul >
+        <li>Brand Strategy</li>
+        <li>Digital Expression</li>
+        <li>Creative Direction</li>
+      </ul>
+    </div>
+		
+	</div> 
 </Layout>
+
+<style>
+	.wrapper {
+		
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 21%;
+     	  margin: 20px 0 70px 0;
+		.main-div{
+			.image-container{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.main-frase{
+				font-family: Arial, Helvetica, sans-serif;
+        		font-weight: bold;
+				font-size: 25px;
+			}
+			.bold-word{
+                font-family: 'Cooper Extra Bold';
+				font-size: 25px;
+				text-align: right;
+            }   
+			img{
+				width: 300px;
+			}
+		}
+    .offers-wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      ul{  
+        font-family: 'Charter Bold';
+        font-size: 22px;
+        list-style: none;
+        padding-left: 0;
+        li::before {
+          content: "";
+          display: inline-block;
+          margin-right: 8px;
+          margin-bottom: 3px;
+          width: 0;
+          height: 0;
+          border-left: 6px solid black;    /* triangle color */
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+        }
+        li{
+          margin-top: 5px;
+        }
+      }
+    }
+
+    }
+</style>
